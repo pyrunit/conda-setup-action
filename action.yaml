@@ -1,5 +1,5 @@
-name: 'Preparing conda'
-description: 'Installs and prepares conda.'
+name: 'Configure conda'
+description: 'Installs and configures conda.'
 
 inputs:
   initializeShell:
