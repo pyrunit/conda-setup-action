@@ -56,5 +56,5 @@ with:
     initializeShell: true
     activate: true
     envName: myproject
-    python: 3.9
+    pythonVersion: 3.9
 ```
