@@ -16,7 +16,7 @@ Use `conda-setup-action` to configure a conda environment in a GitHub Action wor
 | envName                    | Name of the environemnt to create, if any. This name is used if a name is also indicated in `condaFile`. | No |
 | condaFile                  | Conda file (YAML) for the environment to create, if any. | No |
 | activate                   | Inidicates if the environment has to be activated. If no environment is provided, this affects the `base` environment. Defaults to `false` | No | 
-| python                     | Version of `Python` to use. If a `conda file` is provided, then the one indicated there is used. Defaults to `3.8` | No |
+| pythonVersion              | Version of `Python` to use. If a `conda file` is provided, then the one indicated there is used. Defaults to `3.8` | No |
 
 ### Remarks
 

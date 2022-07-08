@@ -18,7 +18,7 @@ inputs:
     description: 'Inidicates if the environment has to be activated. If no environment is provided, this affects the `base` environment.'
     required: false
     default: 'false'
-  python:
+  pythonVersion:
     description: 'Version of Python to use. If indicated at `condaFile`, then that one is used.'
     required: false
     default: '3.8'
@@ -26,6 +26,10 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Configuring Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ inputs.pythonVersion }}
     - name: Preparing conda
       shell: bash
-      run: . ${{ github.action_path }}/action.sh ${{ inputs.initializeShell }} "${{ inputs.envName }}" ${{ inputs.python }} ${{ inputs.activate }} "${{ inputs.condaFile }}"
+      run: . ${{ github.action_path }}/action.sh ${{ inputs.initializeShell }} "${{ inputs.envName }}" ${{ inputs.pythonVersion }} ${{ inputs.activate }} "${{ inputs.condaFile }}"
